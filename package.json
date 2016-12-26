@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/felixacdc/Introduction_to_Node_eg#readme",
   "dependencies": {
+    "good": "^7.1.0",
+    "good-console": "^6.2.0",
     "hapi": "^16.0.2"
   }
 }

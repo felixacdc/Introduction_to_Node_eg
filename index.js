@@ -4,15 +4,54 @@ const server = new Hapi.Server();
 
 server.connection({ port: 8000 });
 
-function handler(request, reply) {
-    reply(request.params);
-}
+let goodOptions = {
+    reporters: {
+        console: [
+            {
+                module: 'good-console',
+                args: [{ log: '*', response: '*' }]
+            },
+            'stdout'
+        ]
+    }
+};
 
-server.route({
+server.register({
+    register: require('good'),
+    options: goodOptions
+}, err => {
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: (request, reply) => {
+            server.log('error', 'Oh no!');
+            server.log('info', 'replying');
+            reply('hello hapi');
+        }
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/{name}',
+        handler: (request, reply) => {
+            reply(`hello ${request.params.name}`);
+        }
+    });
+    
+    server.start(() => console.log(`Started at: ${server.info.uri}`));
+});
+
+
+
+/*function handler(request, reply) {
+    reply(request.params);
+}*/
+
+/*server.route({
     method: 'GET',
     path: '/users/{userId}',
     handler: handler
-});
+});*/
 
 // route parameters
 // opcionales
@@ -38,5 +77,3 @@ server.route({
     path: '/files/{file}.jpg',
     handler: handler
 });*/
-
-server.start(() => console.log(`Started at: ${server.info.uri}`));
