@@ -1,0 +1,22 @@
+{
+  "name": "introduction_to_node_eg",
+  "version": "1.0.0",
+  "description": "Introduccion a node con hapi",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -w ./ index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixacdc/Introduction_to_Node_eg.git"
+  },
+  "author": "Felix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixacdc/Introduction_to_Node_eg/issues"
+  },
+  "homepage": "https://github.com/felixacdc/Introduction_to_Node_eg#readme",
+  "dependencies": {
+    "hapi": "^16.0.2"
+  }
+}
