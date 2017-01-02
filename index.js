@@ -1,4 +1,5 @@
 const Hapi = require('hapi');
+const Boom = require('boom');
 
 const server = new Hapi.Server();
 
@@ -29,6 +30,20 @@ server.register({
             reply('hello hapi');
         }
     });
+    
+    server.route({
+        method: 'GET',
+        path: '/video4',
+        handler: (request, reply) => {
+            /*reply(null, 'hello world');
+            reply('hello world');
+            reply({ hello: 'hello world'});
+            reply(Promise.resolve('hello world'));
+            reply(require('fs').createReadStream(__filename));
+            reply(new Error('oops'));*/
+            reply(Boom.notFound());
+        }
+    })
 
     server.route({
         method: 'GET',
