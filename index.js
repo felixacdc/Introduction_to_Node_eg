@@ -21,13 +21,27 @@ server.register({
     register: require('good'),
     options: goodOptions
 }, err => {
-    server.route({
+    /*server.route({
         method: 'GET',
         path: '/',
         handler: (request, reply) => {
             server.log('error', 'Oh no!');
             server.log('info', 'replying');
             reply('hello hapi');
+        }
+    });*/
+    
+    // Four
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: (request, reply) => {
+            let resp = reply('hello world');
+            
+            resp.code(418);
+            resp.type('text/plain');
+            resp.header('hello', 'world');
+            resp.state('hello', 'world'); // cookies
         }
     });
     
