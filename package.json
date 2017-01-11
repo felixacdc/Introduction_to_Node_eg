@@ -4,7 +4,7 @@
   "description": "Introduccion a node con hapi",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w ./ five.js"
+    "start": "nodemon -w ./ six.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/felixacdc/Introduction_to_Node_eg#readme",
   "dependencies": {
-    "boom": "^4.2.0",
-    "good": "^7.1.0",
-    "good-console": "^6.2.0",
-    "hapi": "^16.0.2",
-    "inert": "latest"
+        "boom": "^4.2.0",
+        "good": "^7.1.0",
+        "good-console": "^6.2.0",
+        "hapi": "^16.0.2",
+        "inert": "latest",
+        "vision": "latest",
+        "handlebars": "latest"
   }
 }
