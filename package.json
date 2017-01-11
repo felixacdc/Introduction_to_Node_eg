@@ -4,7 +4,7 @@
   "description": "Introduccion a node con hapi",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w ./ index.js"
+    "start": "nodemon -w ./ five.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "boom": "^4.2.0",
     "good": "^7.1.0",
     "good-console": "^6.2.0",
-    "hapi": "^16.0.2"
+    "hapi": "^16.0.2",
+    "inert": "latest"
   }
 }
