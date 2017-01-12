@@ -4,7 +4,7 @@
   "description": "Introduccion a node con hapi",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w ./ six.js"
+    "start": "nodemon -w ./ eight.js"
   },
   "repository": {
     "type": "git",
