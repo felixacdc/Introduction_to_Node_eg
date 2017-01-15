@@ -4,7 +4,7 @@
   "description": "Introduccion a node con hapi",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w ./ ten.js"
+    "start": "nodemon -w ./ eleven.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
         "hapi": "^16.0.2",
         "inert": "latest",
         "vision": "latest",
-        "handlebars": "latest"
+        "handlebars": "latest",
+        "joi": "latest"
   }
 }
